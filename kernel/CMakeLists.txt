@@ -1,5 +1,6 @@
 add_subdirectory(arch/${ARCH})
-add_executable(apricot_kernel ${CRTI} main.c ${FS_SRCS} ${CRTN})
+add_subdirectory(fs/)
+add_executable(apricot_kernel ${CRTI} main.c kutils.c ${FS_SRCS} ${CRTN})
 set_target_properties(apricot_kernel PROPERTIES SUFFIX ".elf")
 target_compile_options(apricot_kernel PRIVATE ${ROOT_OPTIONS} -fpic -fno-stack-protector -I${CMAKE_CURRENT_SOURCE_DIR}/include -I${ARCH_INCLUDE})
 target_compile_definitions(apricot_kernel PRIVATE "BG=40, 44, 52" "FG=171, 178, 191")
