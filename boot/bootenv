@@ -1,0 +1,2 @@
+kernel=apricot/apricot_kernel.elf
+nosmp=1

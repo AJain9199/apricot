@@ -1,0 +1,13 @@
+{
+  "config": "initrd/apricot/bootenv",
+  "initrd": {
+    "type": "tar",
+    "directory": "initrd"
+  },
+  "partitions": [
+    {
+      "type": "boot",
+      "size": 16
+    }
+  ]
+}
