@@ -31,3 +31,30 @@ size_t KUTILS(strlen) (const char *str) {
     for (s = str; *s; ++s);
     return (s - str);
 }
+
+void *KUTILS(memmove)(void *to, void *from, size_t count) {
+    void *ret = from;
+    uint8_t *t = (uint8_t *) to;
+    uint8_t *f = (uint8_t *) from;
+
+    if (f > t) {
+        for ( ; count > 0; count--) {
+            *(t++)= *(f++);
+        }
+    } else {
+        for (t+= count-1, f+= count-1; count > 0; count--) {
+            *(t--)= *(f--);
+        }
+    }
+
+    return ret;
+}
+
+void *KUTILS(memset32)(void *target, uint32_t value, size_t count) {
+    uint32_t *t = (uint32_t *) target;
+    for (int i = 0; i < count; i++) {
+        *t = value;
+        t++;
+    }
+    return target;
+}
