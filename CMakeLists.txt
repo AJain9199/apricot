@@ -24,7 +24,7 @@ add_subdirectory(boot/)
 
 add_custom_target(create_iso ALL
         COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_BINARY_DIR}/initrd/apricot
-#        COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_SOURCE_DIR}/fonts/Tamsyn8x16r.psf ${CMAKE_BINARY_DIR}/initrd
+        COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_SOURCE_DIR}/fonts/Tamsyn8x16r.psf ${CMAKE_BINARY_DIR}/initrd
         COMMAND ${CMAKE_COMMAND} -E copy ${CONFIG} ${CMAKE_BINARY_DIR}/
         COMMAND ${CMAKE_COMMAND} -E copy $<TARGET_FILE:apricot_kernel> ${ENVFILE} ${CMAKE_BINARY_DIR}/initrd/apricot
         COMMAND $ENV{HOME}/opt/bin/mkbootimg ${CMAKE_BINARY_DIR}/mkbootimg.json apricot.img

@@ -11,6 +11,8 @@
 #define PSF2_MAGIC 0x864ab572  // First 4 bytes of a valid PSF2 header
 
 #define DEFAULT_FONT "Tamsyn8x16r.psf"
+#define CHAR_HEIGHT 16
+#define CHAR_WIDTH 9
 
 /**
  * Represents a PSF2 font.

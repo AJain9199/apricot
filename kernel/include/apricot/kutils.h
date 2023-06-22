@@ -42,4 +42,9 @@ void *KUTILS(memmove)(void *to, void *from, size_t count);
  */
 void *KUTILS(memset32)(void *target, uint32_t value, size_t count);
 
+/**
+ * Wrapper for psf.h's psf_putc, to output a character to the screen.
+ */
+void KUTILS(putc)(char c);
+
 #endif //APRICOT_KUTILS_H

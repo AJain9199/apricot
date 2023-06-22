@@ -12,8 +12,9 @@
 
 #define OUT(x) x
 
-
 #define concat2(X, Y) X##Y
 #define concat(X, Y)  concat2(X, Y)
+
+typedef unsigned int uint;
 
 #endif //APRICOT_SPEC_H
