@@ -9,5 +9,6 @@
 #define APRICOT_C17_H
 
 #define noreturn _Noreturn
+#define packed __attribute__((__packed__))
 
 #endif //APRICOT_C17_H
